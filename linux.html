@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VoiceTel Phone for Linux — Install Guide & FAQ</title>
+  <meta name="description" content="Download, install, and troubleshoot VoiceTel Phone on Linux (AppImage / .deb / .rpm) with step-by-step setup and FAQ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-start:#667eea;--bg-end:#764ba2;--ring:#e5e7eb;--text:#0f172a;--muted:#475569;--card:#fff;--soft:#f8fafc;--radius:16px;--shadow:0 20px 60px rgba(0,0,0,.2);--shadow-sm:0 8px 24px rgba(0,0,0,.1)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;background:linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);min-height:100vh;color:var(--text);padding:32px;display:flex;justify-content:center}
+    .wrap{width:min(1100px,100%)}
+    .hero{background:linear-gradient(135deg,var(--bg-start),var(--bg-end));border-radius:24px;box-shadow:var(--shadow);padding:22px 22px 16px;color:#fff}
+    .hero h1{font-size:28px}
+    .lead{color:#eef2ff;margin:6px 0 10px;line-height:1.6}
+    .crumbs{font-size:12px;color:#e5e7eb;margin:8px 0 0}
+    .crumbs a{color:#fff;text-decoration:none}
+
+    .grid{display:grid;grid-template-columns:300px 1fr;gap:22px;margin-top:22px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .toc{align-self:start;position:sticky;top:12px;background:var(--card);border:1px solid var(--ring);border-radius:16px;box-shadow:var(--shadow-sm);padding:16px}
+    .toc h4{font-size:14px;margin-bottom:8px;color:var(--muted)}
+    .toc a{display:block;padding:8px 10px;border-radius:10px;color:#334155;text-decoration:none}
+    .toc a:hover{background:var(--soft)}
+
+    section{background:var(--card);border:1px solid var(--ring);border-radius:16px;box-shadow:var(--shadow-sm);padding:24px;margin-bottom:24px}
+    section h2{font-size:20px;margin-bottom:10px}
+    p.intro{color:var(--muted);margin-bottom:14px;line-height:1.6}
+
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px}
+    .card{border:1px solid var(--ring);border-radius:12px;padding:18px;background:#fff;box-shadow:var(--shadow-sm)}
+    .btn{appearance:none;border:none;cursor:pointer;padding:11px 14px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 6px 16px rgba(0,0,0,.12);transition:transform .1s ease}
+    .btn.primary{color:#fff;background:linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%)}
+    .btn:hover{transform:translateY(-1px)}
+
+    /* Fix card spacing & button overlap */
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px;margin-bottom:8px}
+    .card h3{margin-bottom:6px}
+    .card p{margin:6px 0 8px}
+    .card .btn{display:inline-block;margin-top:8px}
+    @media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:720px){.cards{grid-template-columns:1fr}}
+
+    /* Unify FAQ styling with macOS */
+    .faq{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
+    .faq h3{font-size:18px;margin-bottom:12px}
+    .faq-item{margin-bottom:14px}
+    .faq-item + .faq-item{border-top:1px dashed var(--ring);padding-top:10px}
+    .faq-item h4{font-size:15px;color:#111;margin-bottom:6px}
+    .faq-item p{font-size:14px;color:#374151;line-height:1.6}
+
+    ol{margin-left:24px;margin-top:6px}
+    ol>li{margin:10px 0;line-height:1.6}
+    ol ol{margin-top:6px;margin-left:22px;list-style:lower-alpha}
+    code{background:#f3f4f6;border:1px solid var(--ring);padding:2px 6px;border-radius:8px}
+    .callout{background:#eef2ff;border:1px dashed var(--ring);padding:14px;border-radius:12px;margin:14px 0;color:#334155}
+
+    .faq{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
+    .faq h3{font-size:18px;margin-bottom:12px}
+    .faq-item{margin-bottom:14px}
+    .faq-item h4{font-size:15px;color:#111;margin-bottom:6px}
+    .faq-item p{font-size:14px;color:#374151;line-height:1.6}
+
+    footer{margin:28px 0 30px;color:#f8fafc;font-size:12px;text-align:center}
+    .linkwhite{color:#fff;text-decoration:none;font-weight:600}
+    .linkwhite:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h1>VoiceTel Phone for Linux</h1>
+        <a class="linkwhite" href="/index.html">← Back to Landing Page</a>
+      </div>
+      <p class="lead">Step-by-step guide for downloading, installing, and troubleshooting the Linux app (AppImage / .deb / .rpm).</p>
+      <div class="crumbs"><a href="/windows.html">Windows</a> · <a href="/macOS.html">macOS</a> · <a href="/linux.html">Linux</a></div>
+    </div>
+
+    <div class="grid">
+      <aside class="toc">
+        <h4>On this page</h4>
+        <a href="#download">Download</a>
+        <a href="#verify">Verify checksum</a>
+        <a href="#install">Install</a>
+        <a href="#firstlaunch">First launch</a>
+        <a href="#faq">FAQ</a>
+      </aside>
+
+      <main>
+        <section id="download">
+          <h2>1. Download</h2>
+          <p class="intro">Pick the package that matches your distro. If you’re unsure, use the <strong>AppImage</strong>.</p>
+          <div class="cards">
+            <div class="card">
+              <h3>AppImage</h3>
+              <p>Portable. Works across most distros.</p>
+              <p><a class="btn primary" href="#" id="linAppImage">Download .AppImage</a></p>
+            </div>
+            <div class="card">
+              <h3>Debian/Ubuntu (.deb)</h3>
+              <p>Integrates with APT and system menus.</p>
+              <p><a class="btn primary" href="#" id="linDeb">Download .deb</a></p>
+            </div>
+            <div class="card">
+              <h3>Fedora/Red Hat (.rpm)</h3>
+              <p>Integrates with DNF/yum and system menus.</p>
+              <p><a class="btn primary" href="#" id="linRpm">Download .rpm</a></p>
+            </div>
+          </div>
+          <div class="callout"><strong>Note:</strong> Replace these links with your actual Release URLs.</div>
+        </section>
+
+        <section id="verify">
+          <h2>2. Verify checksum (optional)</h2>
+          <p class="intro">Publish SHA‑256 checksums and compare locally.</p>
+          <ol>
+            <li>Open your terminal.</li>
+            <li>Run: <code>sha256sum VoiceTelPhone.AppImage</code> (or the file you downloaded).</li>
+            <li>Compare the output to the value posted on your release page.</li>
+          </ol>
+        </section>
+
+        <section id="install">
+          <h2>3. Install</h2>
+          <ol>
+            <li><span style="font-weight:600">AppImage</span>
+              <ol>
+                <li>Right‑click the file → <em>Properties</em> → <em>Permissions</em>.</li>
+                <li>Enable <em>Allow executing file as program</em>.</li>
+                <li>Double‑click to launch (optional: move to <code>~/Applications</code>).</li>
+              </ol>
+            </li>
+            <li><span style="font-weight:600">Debian/Ubuntu</span>
+              <ol>
+                <li>Open Terminal in the download directory.</li>
+                <li>Run <code>sudo apt install ./VoiceTelPhone.deb</code>.</li>
+              </ol>
+            </li>
+            <li><span style="font-weight:600">Fedora/Red Hat</span>
+              <ol>
+                <li>Open Terminal in the download directory.</li>
+                <li>Run <code>sudo rpm -i VoiceTelPhone.rpm</code>.</li>
+              </ol>
+            </li>
+          </ol>
+        </section>
+
+        <section id="firstlaunch">
+          <h2>4. First launch</h2>
+          <ol>
+            <li>Start <strong>VoiceTel Phone</strong> from your app launcher.</li>
+            <li>Check microphone permissions if prompted by your desktop environment.</li>
+            <li>Enter your SIP credentials (domain, username, password) per your admin.</li>
+          </ol>
+        </section>
+
+        <section id="faq" class="faq">
+          <h3>Frequently Asked Questions</h3>
+          <div class="faq-item">
+            <h4>How do I uninstall?</h4>
+            <p><strong>AppImage:</strong> delete the file. <strong>Debian/Ubuntu:</strong> <code>sudo apt remove voicetel-phone</code>. <strong>Fedora/Red Hat:</strong> <code>sudo rpm -e voicetel-phone</code>.</p>
+          </div>
+          <div class="faq-item">
+            <h4>No audio device / PipeWire issues</h4>
+            <p>Verify PulseAudio/PipeWire is running and select the correct input/output device in your system sound settings.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Wayland screen share</h4>
+            <p>Install <code>xdg-desktop-portal</code> and your DE-specific portal (e.g., <code>xdg-desktop-portal-gnome</code>/<code>...-kde</code>).</p>
+          </div>
+          <div class="faq-item">
+            <h4>Pre-seed configuration</h4>
+            <p>User: <code>~/.config/VoiceTelPhone/voicetel.json</code> · System: <code>/etc/VoiceTelPhone/voicetel.json</code></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>© <span id="yr"></span> VoiceTel · <a class="linkwhite" href="/index.html">Back to Landing Page</a></footer>
+  </div>
+  <script>
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    document.getElementById('linAppImage').href = '#';
+    document.getElementById('linDeb').href = '#';
+    document.getElementById('linRpm').href = '#';
+  </script>
+</body>
+</html>
