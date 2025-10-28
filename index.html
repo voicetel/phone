@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>VoiceTel Phone — Downloads & Links</title>
+        <meta
+            name="description"
+            content="Landing page for VoiceTel Phone across Web, Desktop, and Mobile."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg-start: #667eea;
+                --bg-end: #764ba2;
+                --card-bg: #ffffff;
+                --text: #222;
+                --muted: #666;
+                --ring: #e5e7eb;
+                --shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+                --radius: 18px;
+                --radius-lg: 22px;
+                --pill: 999px;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Inter, sans-serif;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start) 0%,
+                    var(--bg-end) 100%
+                );
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 32px;
+                color: var(--text);
+            }
+            .wrap {
+                width: 100%;
+                max-width: 1200px;
+            }
+            .shell {
+                background: #fff;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+            }
+            header {
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start) 0%,
+                    var(--bg-end) 100%
+                );
+                color: #fff;
+                padding: 36px 28px;
+                position: relative;
+            }
+            header .brand {
+                font-size: 28px;
+                font-weight: 800;
+                letter-spacing: 0.2px;
+            }
+            header .tag {
+                margin-top: 8px;
+                opacity: 0.95;
+            }
+            header .badge {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                background: rgba(255, 255, 255, 0.18);
+                padding: 8px 12px;
+                border-radius: var(--pill);
+                font-size: 13px;
+            }
+            main {
+                padding: 28px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 18px;
+            }
+            @media (max-width: 1000px) {
+                .grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            @media (max-width: 700px) {
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .card {
+                background: var(--card-bg);
+                border-radius: var(--radius);
+                border: 1px solid var(--ring);
+                box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+                padding: 18px;
+            }
+            .card h3 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            .card p {
+                color: var(--muted);
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .actions {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-top: 12px;
+            }
+            .btn {
+                appearance: none;
+                border: none;
+                cursor: pointer;
+                padding: 11px 14px;
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 14px;
+                transition:
+                    transform 0.15s ease,
+                    box-shadow 0.2s ease;
+            }
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+            .btn:active {
+                transform: translateY(0);
+            }
+            .btn.primary {
+                color: #fff;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start) 0%,
+                    var(--bg-end) 100%
+                );
+                box-shadow: 0 8px 20px rgba(118, 75, 162, 0.35);
+            }
+            .btn.ghost {
+                background: #f3f4f6;
+                color: #111;
+            }
+            .btn.small {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+
+            .kicker {
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                color: #6b7280;
+                margin-bottom: 8px;
+            }
+            section {
+                margin-top: 24px;
+            }
+            section h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            section p.lead {
+                color: var(--muted);
+                margin-bottom: 14px;
+            }
+
+            .list {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 16px;
+            }
+            .list ul {
+                background: #fafafa;
+                border: 1px solid var(--ring);
+                border-radius: 12px;
+                padding: 14px;
+                list-style: none;
+            }
+            .list li {
+                display: flex;
+                gap: 8px;
+                align-items: flex-start;
+                padding: 6px 0;
+                font-size: 14px;
+                color: #374151;
+            }
+            .list li .dot {
+                width: 8px;
+                height: 8px;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start),
+                    var(--bg-end)
+                );
+                border-radius: 50%;
+                margin-top: 0.4em;
+            }
+            @media (max-width: 900px) {
+                .list {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .repos {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 16px;
+            }
+            .repo {
+                border: 1px solid var(--ring);
+                border-radius: 12px;
+                padding: 14px;
+                background: #fff;
+            }
+            .repo h4 {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+            .repo a {
+                display: block;
+                color: #4f46e5;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 6px 0;
+            }
+            .repo a:hover {
+                text-decoration: underline;
+            }
+
+            .support {
+                border: 1px dashed var(--ring);
+                border-radius: 14px;
+                padding: 16px;
+                background: #f8f9ff;
+            }
+            .support p {
+                color: #374151;
+                font-size: 14px;
+                margin: 6px 0;
+            }
+            .support .row {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-top: 8px;
+            }
+
+            footer {
+                padding: 16px 20px;
+                border-top: 1px solid var(--ring);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 12px;
+                color: #6b7280;
+            }
+            .chips {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .chip {
+                border-radius: 999px;
+                background: #f3f4f6;
+                padding: 6px 10px;
+                border: 1px solid var(--ring);
+            }
+
+            .os {
+                font-size: 12px;
+                padding: 9px 12px;
+                border-radius: 10px;
+                border: 1px solid var(--ring);
+                background: #fff;
+            }
+            .os strong {
+                display: block;
+                font-size: 12px;
+            }
+
+            /* Carousel */
+            .carousel {
+                margin-top: 24px;
+                overflow: hidden;
+            }
+            .carousel .track {
+                display: flex;
+                gap: 12px;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+            .slide {
+                min-width: 180px;
+                aspect-ratio: 9/16;
+                background: linear-gradient(135deg, #eef2ff, #e9d5ff);
+                border: 1px solid var(--ring);
+                border-radius: 30px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                flex-shrink: 0;
+            }
+            .slide::after {
+                content: "";
+                position: absolute;
+                inset: 10px;
+                border-radius: 26px;
+                border: 1px solid rgba(0, 0, 0, 0.06);
+            }
+            .slide .label {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                font-size: 12px;
+                padding: 6px 8px;
+                border-radius: 10px;
+            }
+
+            /***** Status Modal *****/
+            .modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 50;
+            }
+            .modal.show {
+                display: flex;
+            }
+            .modal .panel {
+                background: #fff;
+                border-radius: 18px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                width: min(680px, 92vw);
+                max-height: 80vh;
+                overflow: auto;
+                border: 1px solid var(--ring);
+            }
+            .modal header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start),
+                    var(--bg-end)
+                );
+                color: #fff;
+                padding: 14px 16px;
+            }
+            .modal header h3 {
+                font-size: 16px;
+            }
+            .modal header .close {
+                appearance: none;
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                color: #fff;
+                padding: 6px 10px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .modal .body {
+                padding: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="shell">
+                <header>
+                    <div class="brand">VoiceTel Phone</div>
+                    <div class="tag">
+                        One app, three form factors — same crystal-clear
+                        calling.
+                    </div>
+                    <div class="badge" id="detectBadge">
+                        Auto-detected: <span id="osName">…</span>
+                    </div>
+                </header>
+                <main>
+                    <!-- Get started / Downloads -->
+                    <div class="kicker">Get started</div>
+                    <div class="grid">
+                        <!-- Browser Phone -->
+                        <article class="card">
+                            <h3>Browser Phone</h3>
+                            <p>
+                                Runs entirely in the browser. No install. Great
+                                for quick calls and lightweight setups.
+                            </p>
+                            <div class="actions">
+                                <a
+                                    class="btn primary"
+                                    href="phone.html"
+                                    id="webLink"
+                                    target="phone"
+                                    >Open Web Phone</a
+                                >
+                                <button
+                                    class="btn ghost"
+                                    onclick="copy('#webLink')"
+                                >
+                                    Copy link
+                                </button>
+                            </div>
+                            <div class="chips" style="margin-top: 12px">
+                                <div class="chip os">
+                                    HTML • SIP.js • WebRTC
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Desktop -->
+                        <article class="card">
+                            <h3>Desktop</h3>
+                            <p>
+                                Native desktop client using your system audio
+                                and local configuration. Works across all major
+                                platforms.
+                            </p>
+                            <div class="actions">
+                                <a
+                                    class="btn primary"
+                                    id="winDl"
+                                    href="windows.html"
+                                    >Windows</a
+                                >
+                                <a
+                                    class="btn primary"
+                                    id="macDl"
+                                    href="macOS.html"
+                                    >macOS</a
+                                >
+                                <a
+                                    class="btn primary"
+                                    id="linuxDl"
+                                    href="linux.html"
+                                    >Linux</a
+                                >
+                            </div>
+                            <div class="chips" style="margin-top: 12px">
+                                <div class="chip os">
+                                    <strong>Windows</strong>.exe / .msi
+                                </div>
+                                <div class="chip os">
+                                    <strong>macOS</strong>.dmg / .zip
+                                </div>
+                                <div class="chip os">
+                                    <strong>Linux</strong>.AppImage / .deb /
+                                    .rpm
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Mobile -->
+                        <article class="card">
+                            <h3>Mobile</h3>
+                            <p>
+                                Optimized for on-the-go. Background calling,
+                                Bluetooth audio, and adaptive network switching.
+                            </p>
+                            <div class="actions">
+                                <a class="btn primary" id="iosLink" href="#"
+                                    >iPhone</a
+                                >
+                                <a class="btn primary" id="androidLink" href="#"
+                                    >Android</a
+                                >
+                            </div>
+                            <div class="chips" style="margin-top: 12px">
+                                <div class="chip os">iOS • Bluetooth Audio</div>
+                                <div class="chip os">
+                                    Android • Bluetooth Audio
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Gallery (phone-form factor) -->
+                    <section aria-label="Platform Gallery">
+                        <h2>Gallery</h2>
+                        <p class="lead">
+                            Preview VoiceTel Phone across web, desktop, and
+                            mobile form factors.
+                        </p>
+                        <div class="carousel">
+                            <div
+                                class="track"
+                                id="galleryTrack"
+                                aria-live="off"
+                            >
+                                <div class="slide">
+                                    <img
+                                        src="./images/1.jpg"
+                                        alt="Screenshot 1"
+                                    /><span class="label">Web — Dialer</span>
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/2.jpg"
+                                        alt="Screenshot 2"
+                                    /><span class="label">Web — Settings</span>
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/3.jpg"
+                                        alt="Screenshot 3"
+                                    /><span class="label"
+                                        >Desktop — Dialer</span
+                                    >
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/4.jpg"
+                                        alt="Screenshot 4"
+                                    /><span class="label"
+                                        >Desktop — History</span
+                                    >
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/5.jpg"
+                                        alt="Screenshot 5"
+                                    /><span class="label"
+                                        >Desktop — Config</span
+                                    >
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/6.jpg"
+                                        alt="Screenshot 6"
+                                    /><span class="label">iPhone — Call</span>
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/7.jpg"
+                                        alt="Screenshot 7"
+                                    /><span class="label"
+                                        >iPhone — Contacts</span
+                                    >
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/8.jpg"
+                                        alt="Screenshot 8"
+                                    /><span class="label">Android — Call</span>
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/9.jpg"
+                                        alt="Screenshot 9"
+                                    /><span class="label"
+                                        >Android — Settings</span
+                                    >
+                                </div>
+                                <div class="slide">
+                                    <img
+                                        src="./images/10.jpg"
+                                        alt="Screenshot 10"
+                                    /><span class="label">Diagnostics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Features -->
+                    <section>
+                        <h2>Features</h2>
+                        <p class="lead">
+                            Everything you need to place and receive
+                            high-quality calls, plus platform-specific
+                            advantages.
+                        </p>
+
+                        <div class="kicker">Common across all platforms</div>
+                        <ul
+                            class="repo"
+                            style="
+                                display: block;
+                                list-style: none;
+                                padding: 14px;
+                                margin-top: 10px;
+                            "
+                        >
+                            <li style="padding: 6px 0">
+                                ✔️ Secure SIP over TLS
+                            </li>
+                            <li style="padding: 6px 0">
+                                ✔️ DTMF (RFC 2833 and SIP INFO)
+                            </li>
+                            <li style="padding: 6px 0">
+                                ✔️ Caller ID, privacy toggle, and history
+                            </li>
+                            <li style="padding: 6px 0">
+                                ✔️ NAT-friendly ICE/STUN configuration
+                            </li>
+                            <li style="padding: 6px 0">
+                                ✔️ Config persistence with local storage
+                            </li>
+                            <li style="padding: 6px 0">
+                                ✔️ Troubleshooting log and diagnostics
+                            </li>
+                        </ul>
+
+                        <div class="kicker" style="margin-top: 16px">
+                            Platform-specific
+                        </div>
+                        <div class="list" style="margin-top: 6px">
+                            <ul>
+                                <li>
+                                    <span class="dot"></span> Browser mic
+                                    permissions guide
+                                </li>
+                                <li>
+                                    <span class="dot"></span> Instant launch
+                                    links (tel: / custom scheme)
+                                </li>
+                                <li>
+                                    <span class="dot"></span> No install —
+                                    perfect for kiosks & VDI
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="dot"></span> System tray &
+                                    global mute hotkey
+                                </li>
+                                <li>
+                                    <span class="dot"></span> Auto-start on
+                                    login, auto-register
+                                </li>
+                                <li>
+                                    <span class="dot"></span> Crash-resilient
+                                    reconnect & logs
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="dot"></span> Native audio
+                                    routing & Bluetooth
+                                </li>
+                                <li>
+                                    <span class="dot"></span> Background mode
+                                    with quick actions
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Repos & Docs -->
+                    <section>
+                        <h2>Repositories & Docs</h2>
+                        <p class="lead">
+                            Source, installers, and SDKs organized by platform.
+                        </p>
+                        <div class="repos">
+                            <div class="repo">
+                                <h4>Browser Phone</h4>
+                                <a href="phone.html" target="phone">Start</a>
+                                <a href="http://www.voicetel.com"
+                                    >Get authentication credentails</a
+                                >
+                            </div>
+                            <div class="repo">
+                                <h4>Desktop</h4>
+                                <a href="windows.html">Windows</a>
+                                <a href="macOS.html">macOS</a>
+                                <a href="linux.html">Linux</a>
+                                <a href="http://www.voicetel.com"
+                                    >Get authentication credentails</a
+                                >
+                            </div>
+                            <div class="repo">
+                                <h4>Mobile</h4>
+                                <a href="iphone.html">iPhone</a>
+                                <a href="android.html">Android</a>
+                                <a href="http://www.voicetel.com"
+                                    >Get authentication credentails</a
+                                >
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Support -->
+                    <section>
+                        <h2>Support</h2>
+                        <div class="support">
+                            <p>Need a hand? We’re here for you.</p>
+                            <div class="row">
+                                <a
+                                    class="btn primary"
+                                    href="mailto:support@voicetel.com"
+                                    >Email Support</a
+                                >
+                                <button
+                                    class="btn ghost"
+                                    id="statusBtn"
+                                    type="button"
+                                >
+                                    Status Page
+                                </button>
+                                <a class="btn ghost" href="knowledge.html"
+                                    >Knowledge Base</a
+                                >
+                                <a
+                                    class="btn ghost"
+                                    href="https://github.com/voicetel/phone/issues"
+                                    >Report an Issue</a
+                                >
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Status Modal -->
+                    <div
+                        class="modal"
+                        id="statusModal"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="statusTitle"
+                    >
+                        <div class="panel">
+                            <header>
+                                <h3 id="statusTitle">
+                                    VoiceTel Phone — Release Status
+                                </h3>
+                                <button class="close" id="statusClose">
+                                    Close
+                                </button>
+                            </header>
+                            <div class="body">
+                                <p class="lead">
+                                    All current builds and their reported
+                                    status.
+                                </p>
+                                <div id="statusList" class="repos"></div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div>
+                        © <span id="yr"></span> VoiceTel. All rights reserved.
+                    </div>
+                    <div class="chips">
+                        <div class="chip">
+                            Build <span id="build">v3.5.5</span>
+                        </div>
+                        <div class="chip">SIP Domain tls.voicetel.com</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script>
+            // Version & year
+            const APP_VERSION = window.VOICETEL_VERSION || "3.5.5";
+            document.getElementById("build").textContent = APP_VERSION;
+            document.getElementById("yr").textContent =
+                new Date().getFullYear();
+
+            // Simple OS detect for badge + focus
+            const ua = navigator.userAgent || navigator.platform || "";
+            const isMac = /Mac|Macintosh|Mac OS/.test(ua);
+            const isWin = /Win/.test(ua);
+            const isLinux = /Linux|X11/.test(ua) && !/Android/.test(ua);
+
+            const osBadge = document.getElementById("osName");
+            if (isMac) osBadge.textContent = "macOS";
+            else if (isWin) osBadge.textContent = "Windows";
+            else if (isLinux) osBadge.textContent = "Linux";
+            else if (/Android/.test(ua)) osBadge.textContent = "Android";
+            else if (/(iPhone|iPad|iPod)/.test(ua)) osBadge.textContent = "iOS";
+            else osBadge.textContent = "Unknown";
+
+            const focusMap = [
+                [isWin, "#winDl"],
+                [isMac, "#macDl"],
+                [isLinux, "#linuxDl"],
+                [/Android/.test(ua), "#androidLink"],
+                [/(iPhone|iPad|iPod)/.test(ua), "#iosLink"],
+            ];
+            for (const [ok, sel] of focusMap) {
+                if (ok) {
+                    const el = document.querySelector(sel);
+                    if (el) {
+                        el.focus();
+                        break;
+                    }
+                }
+            }
+
+            // Copy helper
+            function copy(sel) {
+                const el = document.querySelector(sel);
+                if (!el) return;
+                navigator.clipboard
+                    .writeText(el.href)
+                    .then(() => {
+                        el.classList.add("copied");
+                        const prev = el.textContent;
+                        el.textContent = "Copied!";
+                        setTimeout(() => {
+                            el.textContent = prev;
+                            el.classList.remove("copied");
+                        }, 900);
+                    })
+                    .catch(() => {});
+            }
+            window.copy = copy;
+
+            // Placeholder links (replace with your real URLs)
+            document.getElementById("webLink").href = "#";
+            document.getElementById("winDl").href = "#";
+            document.getElementById("macDl").href = "#";
+            document.getElementById("linuxDl").href = "#";
+            document.getElementById("iosLink").href = "#";
+            document.getElementById("androidLink").href = "#";
+
+            // Gallery: continuous, slow, seamless loop
+            (function () {
+                const track = document.getElementById("galleryTrack");
+                if (!track) return;
+                const slides = [...track.children];
+                let x = 0; // scroll position
+                const speed = 0.15; // pixels per frame (~9px/s @ 60fps)
+
+                // Duplicate slides to create an infinite "treadmill"
+                slides.forEach((s) => track.appendChild(s.cloneNode(true)));
+                const contentWidth = () => track.scrollWidth / 2; // width of one set
+
+                function tick() {
+                    x += speed;
+                    if (x >= contentWidth()) x = 0; // wrap seamlessly at halfway
+                    track.scrollLeft = x;
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            })();
+            // --- Status Modal ---
+            (function () {
+                const btn = document.getElementById("statusBtn");
+                const modal = document.getElementById("statusModal");
+                const close = document.getElementById("statusClose");
+                const list = document.getElementById("statusList");
+
+                // Replace this with a live data feed if available
+                const releases = window.VOICETEL_RELEASES || [
+                    { channel: "Web Phone", version: "3.5.5", status: "OK" },
+                    { channel: "Windows", version: "3.5.5", status: "OK" },
+                    { channel: "macOS", version: "3.5.5", status: "OK" },
+                    { channel: "Linux", version: "3.5.5", status: "OK" },
+                    {
+                        channel: "iPhone",
+                        version: "3.5.5",
+                        status: "OK",
+                    },
+                    {
+                        channel: "Android",
+                        version: "3.5.5",
+                        status: "OK",
+                    },
+                ];
+
+                function pill(text, bg, border) {
+                    const span = document.createElement("span");
+                    span.textContent = text;
+                    span.style.padding = "4px 8px";
+                    span.style.borderRadius = "999px";
+                    span.style.border =
+                        "1px solid " + (border || "var(--ring)");
+                    span.style.fontSize = "12px";
+                    span.style.background = bg || "#f3f4f6";
+                    return span;
+                }
+
+                function render() {
+                    list.innerHTML = "";
+                    releases.forEach((r) => {
+                        const card = document.createElement("div");
+                        card.className = "repo";
+                        const h = document.createElement("h4");
+                        h.textContent = r.channel;
+                        const v = document.createElement("div");
+                        v.style.margin = "6px 0";
+                        v.appendChild(pill(`Version ${r.version}`));
+                        const s = document.createElement("div");
+                        const ok = (r.status || "").toUpperCase() === "OK";
+                        const chip = pill(
+                            ok ? "Status: OK" : `Status: ${r.status}`,
+                            ok ? "#ecfdf5" : "#fff7ed",
+                            ok ? "#10b98155" : "#f59e0b55",
+                        );
+                        card.appendChild(h);
+                        card.appendChild(v);
+                        s.appendChild(chip);
+                        card.appendChild(s);
+                        list.appendChild(card);
+                    });
+                }
+
+                function open() {
+                    modal.classList.add("show");
+                    render();
+                }
+                function hide() {
+                    modal.classList.remove("show");
+                }
+                btn?.addEventListener("click", open);
+                close?.addEventListener("click", hide);
+                modal?.addEventListener("click", (e) => {
+                    if (e.target === modal) hide();
+                });
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") hide();
+                });
+            })();
+        </script>
+    </body>
+</html>
