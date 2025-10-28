@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>VoiceTel Phone for macOS — Install Guide & Download</title>
+        <meta
+            name="description"
+            content="Download and install VoiceTel Phone on macOS (.dmg/.zip) with clear, step-by-step guidance."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg-start: #667eea;
+                --bg-end: #764ba2;
+                --ring: #e5e7eb;
+                --text: #0f172a;
+                --muted: #475569;
+                --card: #fff;
+                --soft: #f8fafc;
+                --radius: 16px;
+                --shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+                --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    Inter,
+                    system-ui,
+                    Segoe UI,
+                    Roboto,
+                    sans-serif;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start) 0%,
+                    var(--bg-end) 100%
+                );
+                min-height: 100vh;
+                color: var(--text);
+                padding: 32px;
+                display: flex;
+                justify-content: center;
+            }
+            .wrap {
+                width: min(1100px, 100%);
+            }
+            .hero {
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start),
+                    var(--bg-end)
+                );
+                border-radius: 24px;
+                box-shadow: var(--shadow);
+                padding: 22px 22px 16px;
+                color: #fff;
+            }
+            .hero h1 {
+                font-size: 28px;
+                margin-bottom: 6px;
+            }
+            .lead {
+                color: #eef2ff;
+                margin: 8px 0 14px;
+                line-height: 1.4;
+            }
+            .crumbs {
+                font-size: 12px;
+                color: #e5e7eb;
+                margin: 8px 0 0;
+            }
+            .crumbs a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 300px 1fr;
+                gap: 18px;
+                margin-top: 18px;
+            }
+            @media (max-width: 980px) {
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .toc {
+                align-self: start;
+                position: sticky;
+                top: 12px;
+                background: var(--card);
+                border: 1px solid var(--ring);
+                border-radius: 16px;
+                box-shadow: var(--shadow-sm);
+                padding: 12px;
+            }
+            .toc h4 {
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: var(--muted);
+            }
+            .toc a {
+                display: block;
+                padding: 8px 10px;
+                border-radius: 10px;
+                color: #334155;
+                text-decoration: none;
+            }
+            .toc a:hover {
+                background: var(--soft);
+            }
+
+            section {
+                background: var(--card);
+                border: 1px solid var(--ring);
+                border-radius: 16px;
+                box-shadow: var(--shadow-sm);
+                padding: 24px 20px;
+                margin-top: 18px;
+            }
+            section h2 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+            p.intro {
+                color: var(--muted);
+                margin-bottom: 18px;
+                line-height: 1.5;
+            }
+
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 18px;
+                margin-top: 12px;
+            }
+            .card {
+                border: 1px solid var(--ring);
+                border-radius: 12px;
+                padding: 16px 14px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 160px;
+            }
+            .card h3 {
+                margin-bottom: 6px;
+                font-size: 16px;
+            }
+            .card p {
+                margin-bottom: 8px;
+                line-height: 1.4;
+            }
+            .btn {
+                appearance: none;
+                border: none;
+                cursor: pointer;
+                padding: 11px 14px;
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 14px;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+                text-align: center;
+                display: inline-block;
+                margin-top: auto;
+            }
+            .btn.primary {
+                color: #fff;
+                background: linear-gradient(
+                    135deg,
+                    var(--bg-start) 0%,
+                    var(--bg-end) 100%
+                );
+            }
+
+            ol {
+                margin-left: 20px;
+            }
+            ol > li {
+                margin: 8px 0;
+                line-height: 1.55;
+            }
+            ol ol {
+                margin-top: 6px;
+                margin-left: 18px;
+                list-style: lower-alpha;
+            }
+            code {
+                background: #f3f4f6;
+                border: 1px solid var(--ring);
+                padding: 2px 6px;
+                border-radius: 8px;
+            }
+            .callout {
+                background: #eef2ff;
+                border: 1px dashed var(--ring);
+                padding: 12px;
+                border-radius: 12px;
+                margin: 14px 0;
+                color: #334155;
+                line-height: 1.4;
+            }
+
+            footer {
+                margin: 18px 0 28px;
+                color: #f8fafc;
+                font-size: 12px;
+                text-align: center;
+            }
+            .linkwhite {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="hero">
+                <div
+                    style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 12px;
+                    "
+                >
+                    <h1>VoiceTel Phone for macOS</h1>
+                    <a class="linkwhite" href="/index.html"
+                        >← Back to Landing Page</a
+                    >
+                </div>
+                <p class="lead">
+                    Download and install the macOS desktop app (.dmg or .zip).
+                </p>
+                <div class="crumbs">
+                    <a href="/windows.html">Windows</a> ·
+                    <a href="/macOS.html">macOS</a> ·
+                    <a href="/linux.html">Linux</a>
+                </div>
+            </div>
+
+            <div class="grid">
+                <aside class="toc">
+                    <h4>On this page</h4>
+                    <a href="#download">Download</a>
+                    <a href="#verify">Verify checksum (optional)</a>
+                    <a href="#install">Install</a>
+                    <a href="#firstlaunch">First launch</a>
+                    <a href="#faq">FAQ</a>
+                </aside>
+
+                <main>
+                    <section id="download">
+                        <h2>1. Download</h2>
+                        <p class="intro">
+                            Choose the build format that works best for you. If
+                            unsure, use the <strong>.dmg</strong>.
+                        </p>
+                        <div class="cards">
+                            <div class="card">
+                                <h3>Disk Image (.dmg) arm64</h3>
+                                <p>Drag-and-drop installation.</p>
+                                <a
+                                    class="btn primary"
+                                    href="#"
+                                    id="macDmg64"
+                                    >Download .dmg</a
+                                >
+                            </div>
+                            <div class="card">
+                                <h3>Archive (.zip) arm64</h3>
+                                <p>Unzip and move to Applications.</p>
+                                <a
+                                    class="btn primary"
+                                    href="#"
+                                    id="macZip64"
+                                    >Download .zip</a
+                                >
+                            </div>
+                            <div class="card">
+                                <h3>Disk Image (.dmg)</h3>
+                                <p>Drag-and-drop installation.</p>
+                                <a
+                                    class="btn primary"
+                                    href="#"
+                                    id="macDmg"
+                                    >Download .dmg</a
+                                >
+                            </div>
+                            <div class="card">
+                                <h3>Archive (.zip)</h3>
+                                <p>Unzip and move to Applications.</p>
+                                <a
+                                    class="btn primary"
+                                    href="https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-mac.zip"
+                                    id="macZip"
+                                    >Download .zip</a
+                                >
+                            </div>
+                        </div>
+                        <div class="callout">
+                            <strong>SHA256 SUMS:</strong><br />
+<pre>
+467d7698fcdcaa49dda2905641737551778d0fe7e87d4b09193409e4afb25465 VoiceTel-3.5.5-arm64.dmg
+ec30ba3e435428a0920d9d27cba7ed31194e9b7d470ef5eaf9ede754b23a47e1 VoiceTel-3.5.5-arm64-mac.zip
+d555bd454b5da6a73cbda8e7096e500d7bbae503dbe5caecd878ec716d95daf2 VoiceTel-3.5.5.dmg
+0eb4bfeca67eb8286d5bce9a5faf837374985afbd61b985af945ab8d9e7c8f3f VoiceTel-3.5.5-mac.zip
+<pre>
+                        </div>
+                    </section>
+
+                    <section id="verify">
+                        <h2>2. Verify checksum (optional)</h2>
+                        <p class="intro">
+                            If your organization validates downloads, publish
+                            SHA-256 checksums and compare locally.
+                        </p>
+                        <ol>
+                            <li>Open <code>Terminal</code>.</li>
+                            <li>
+                                Run:
+                                <code>shasum -a 256 VoiceTelPhone.dmg</code>
+                            </li>
+                            <li>
+                                Compare the output to the value posted on your
+                                release page.
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="install">
+                        <h2>3. Install</h2>
+                        <ol>
+                            <li>Open the downloaded <strong>.dmg</strong>.</li>
+                            <li>
+                                Drag <strong>VoiceTel Phone.app</strong> to the
+                                <strong>Applications</strong> folder.
+                                <ol>
+                                    <li>Eject the disk image when finished.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                On first launch, if macOS warns that the app is
+                                from the Internet:
+                                <ol>
+                                    <li>
+                                        Go to
+                                        <em
+                                            >System Settings → Privacy &amp;
+                                            Security</em
+                                        >.
+                                    </li>
+                                    <li>
+                                        Scroll to the security message for
+                                        VoiceTel Phone and click
+                                        <em>Open Anyway</em>.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="firstlaunch">
+                        <h2>4. First launch</h2>
+                        <ol>
+                            <li>
+                                Open <strong>VoiceTel Phone</strong> from
+                                Applications.
+                            </li>
+                            <li>
+                                Allow microphone access when prompted.
+                                <ol>
+                                    <li>
+                                        Go to
+                                        <em
+                                            >System Settings → Privacy &amp;
+                                            Security → Microphone</em
+                                        >.
+                                    </li>
+                                    <li>
+                                        Enable access for
+                                        <em>VoiceTel Phone</em>.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Enter your SIP credentials (domain, username,
+                                password) per your admin.
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="faq">
+                        <h2>FAQ</h2>
+                        <div class="callout">
+                            <strong
+                                >Q: How do I uninstall VoiceTel Phone?</strong
+                            ><br />
+                            A: Quit the app, open <em>Applications</em>, and
+                            drag <strong>VoiceTel Phone.app</strong> to the
+                            Trash.
+                        </div>
+
+                        <div class="callout">
+                            <strong
+                                >Q: The app won't open after
+                                installation.</strong
+                            ><br />
+                            A: Right-click the app and choose <em>Open</em> to
+                            bypass Gatekeeper. You can also go to
+                            <em>System Settings → Privacy &amp; Security</em>
+                            and click <em>Open Anyway</em>.
+                        </div>
+
+                        <div class="callout">
+                            <strong>Q: The microphone isn't working.</strong
+                            ><br />
+                            A: Ensure VoiceTel Phone has permission under
+                            <em
+                                >System Settings → Privacy &amp; Security →
+                                Microphone</em
+                            >. Also check <em>System Settings → Sound</em> for
+                            the correct input device.
+                        </div>
+
+                        <div class="callout">
+                            <strong
+                                >Q: Can I pre-configure the app for my
+                                users?</strong
+                            ><br />
+                            A: Yes. Place <code>voicetel.json</code> under
+                            <code
+                                >~/Library/Application
+                                Support/VoiceTelPhone/</code
+                            >
+                            for user-level or
+                            <code
+                                >/Library/Application
+                                Support/VoiceTelPhone/</code
+                            >
+                            for system-wide deployment.
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <footer>
+                © <span id="yr"></span> VoiceTel ·
+                <a class="linkwhite" href="/index.html">Back to Landing Page</a>
+            </footer>
+        </div>
+        <script>
+            document.getElementById("yr").textContent =
+                new Date().getFullYear();
+            document.getElementById("macDmg64").href = "https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-arm64.dmg";
+            document.getElementById("macZip64").href = "https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-arm64-mac.zip";
+            document.getElementById("macDmg").href = "https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.dmg";
+            document.getElementById("macZip").href = "https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-mac.zip";
+        </script>
+    </body>
+</html>
