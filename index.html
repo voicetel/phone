@@ -407,7 +407,7 @@
                     <div class="grid">
                         <!-- Browser Phone -->
                         <article class="card">
-                            <h3>Browser Phone</h3>
+                            <h3>Browser</h3>
                             <p>
                                 Runs entirely in the browser. No install. Great
                                 for quick calls and lightweight setups.
@@ -415,7 +415,7 @@
                             <div class="actions">
                                 <a
                                     class="btn primary"
-                                    href="phone.html"
+                                    href="/phone.html"
                                     id="webLink"
                                     target="phone"
                                     >Open Web Phone</a
@@ -446,19 +446,19 @@
                                 <a
                                     class="btn primary"
                                     id="winDl"
-                                    href="windows.html"
+                                    href="/windows.html"
                                     >Windows</a
                                 >
                                 <a
                                     class="btn primary"
                                     id="macDl"
-                                    href="macOS.html"
+                                    href="/macOS.html"
                                     >macOS</a
                                 >
                                 <a
                                     class="btn primary"
                                     id="linuxDl"
-                                    href="linux.html"
+                                    href="/linux.html"
                                     >Linux</a
                                 >
                             </div>
@@ -484,10 +484,16 @@
                                 Bluetooth audio, and adaptive network switching.
                             </p>
                             <div class="actions">
-                                <a class="btn primary" id="iosLink" href="#"
+                                <a
+                                    class="btn primary"
+                                    id="iosLink"
+                                    href="/iphone.html"
                                     >iPhone</a
                                 >
-                                <a class="btn primary" id="androidLink" href="#"
+                                <a
+                                    class="btn primary"
+                                    id="androidLink"
+                                    href="/android.html"
                                     >Android</a
                                 >
                             </div>
@@ -680,27 +686,18 @@
                         <div class="repos">
                             <div class="repo">
                                 <h4>Browser Phone</h4>
-                                <a href="phone.html" target="phone">Start</a>
-                                <a href="http://www.voicetel.com"
-                                    >Get authentication credentails</a
-                                >
+                                <a href="/phone.html" target="phone">Start</a>
                             </div>
                             <div class="repo">
                                 <h4>Desktop</h4>
-                                <a href="windows.html">Windows</a>
-                                <a href="macOS.html">macOS</a>
-                                <a href="linux.html">Linux</a>
-                                <a href="http://www.voicetel.com"
-                                    >Get authentication credentails</a
-                                >
+                                <a href="/windows.html">Windows</a>
+                                <a href="/macOS.html">macOS</a>
+                                <a href="/linux.html">Linux</a>
                             </div>
                             <div class="repo">
                                 <h4>Mobile</h4>
-                                <a href="iphone.html">iPhone</a>
-                                <a href="android.html">Android</a>
-                                <a href="http://www.voicetel.com"
-                                    >Get authentication credentails</a
-                                >
+                                <a href="/iphone.html">iPhone</a>
+                                <a href="/android.html">Android</a>
                             </div>
                         </div>
                     </section>
@@ -834,12 +831,12 @@
             window.copy = copy;
 
             // Placeholder links (replace with your real URLs)
-            document.getElementById("webLink").href = "#";
-            document.getElementById("winDl").href = "#";
-            document.getElementById("macDl").href = "#";
-            document.getElementById("linuxDl").href = "#";
-            document.getElementById("iosLink").href = "#";
-            document.getElementById("androidLink").href = "#";
+            document.getElementById("webLink").href = "/phone.html";
+            document.getElementById("winDl").href = "/windows.html";
+            document.getElementById("macDl").href = "/macOS.html";
+            document.getElementById("linuxDl").href = "/linux.html";
+            document.getElementById("iosLink").href = "/iphone.html";
+            document.getElementById("androidLink").href = "/android.html";
 
             // Gallery: continuous, slow, seamless loop
             (function () {
