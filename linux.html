@@ -111,7 +111,13 @@
               <p><a class="btn primary" href="#" id="linRpm">Download .rpm</a></p>
             </div>
           </div>
-          <div class="callout"><strong>Note:</strong> Replace these links with your actual Release URLs.</div>
+          <div class="callout">
+            <strong>SHA256 SUMS:</strong><br />
+<pre>
+ba8a0876169c939a1f69ea2e7eebf3fc4fb235222bb021563332bf8aab684030  VoiceTel-3.5.5.AppImage
+08ab95204344a3fe3dfe4447c23c248dfafbeaee20ccd78a9147bd6109b49195  voicetel-phone_3.5.5_amd64.deb
+<pre>
+          </div>
         </section>
 
         <section id="verify">
@@ -184,8 +190,8 @@
   </div>
   <script>
     document.getElementById('yr').textContent=new Date().getFullYear();
-    document.getElementById('linAppImage').href = '#';
-    document.getElementById('linDeb').href = '#';
+    document.getElementById('linAppImage').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.AppImage';
+    document.getElementById('linDeb').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/voicetel-phone_3.5.5_amd64.deb';
     document.getElementById('linRpm').href = '#';
   </script>
 </body>
