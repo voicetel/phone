@@ -30,27 +30,18 @@
     section h2{font-size:20px;margin-bottom:10px}
     p.intro{color:var(--muted);margin-bottom:14px;line-height:1.6}
 
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:12px;margin-bottom:8px}
     .card{border:1px solid var(--ring);border-radius:12px;padding:18px;background:#fff;box-shadow:var(--shadow-sm)}
     .btn{appearance:none;border:none;cursor:pointer;padding:11px 14px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 6px 16px rgba(0,0,0,.12);transition:transform .1s ease}
     .btn.primary{color:#fff;background:linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%)}
     .btn:hover{transform:translateY(-1px)}
 
-    /* Fix card spacing & button overlap */
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px;margin-bottom:8px}
+    /* Match Windows cards layout */
     .card h3{margin-bottom:6px}
     .card p{margin:6px 0 8px}
     .card .btn{display:inline-block;margin-top:8px}
-    @media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:720px){.cards{grid-template-columns:1fr}}
 
-    /* Unify FAQ styling with macOS */
-    .faq{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
-    .faq h3{font-size:18px;margin-bottom:12px}
-    .faq-item{margin-bottom:14px}
-    .faq-item + .faq-item{border-top:1px dashed var(--ring);padding-top:10px}
-    .faq-item h4{font-size:15px;color:#111;margin-bottom:6px}
-    .faq-item p{font-size:14px;color:#374151;line-height:1.6}
 
     ol{margin-left:24px;margin-top:6px}
     ol>li{margin:10px 0;line-height:1.6}
@@ -161,23 +152,23 @@ c568e3fff0e42893103919000450d45377a7ffcb0d9e3b74f30f5e194ae5c4b7  VoiceTel-3.5.5
           </ol>
         </section>
 
-        <section id="faq" class="faq">
-          <h3>Frequently Asked Questions</h3>
-          <div class="faq-item">
-            <h4>How do I uninstall?</h4>
-            <p><strong>AppImage:</strong> delete the file. <strong>Debian/Ubuntu:</strong> <code>sudo apt remove voicetel-phone</code>. <strong>Fedora/Red Hat:</strong> <code>sudo rpm -e voicetel-phone</code>.</p>
+        <section id="faq">
+          <h2>FAQ</h2>
+          <div class="callout">
+            <strong>Q: How do I uninstall?</strong><br />
+            A: <strong>AppImage:</strong> delete the file. <strong>Debian/Ubuntu:</strong> <code>sudo apt remove voicetel-phone</code>. <strong>Fedora/Red Hat:</strong> <code>sudo rpm -e voicetel-phone</code>.
           </div>
-          <div class="faq-item">
-            <h4>No audio device / PipeWire issues</h4>
-            <p>Verify PulseAudio/PipeWire is running and select the correct input/output device in your system sound settings.</p>
+          <div class="callout">
+            <strong>Q: No audio device / PipeWire issues</strong><br />
+            A: Verify PulseAudio/PipeWire is running and select the correct input/output device in your system sound settings.
           </div>
-          <div class="faq-item">
-            <h4>Wayland screen share</h4>
-            <p>Install <code>xdg-desktop-portal</code> and your DE-specific portal (e.g., <code>xdg-desktop-portal-gnome</code>/<code>...-kde</code>).</p>
+          <div class="callout">
+            <strong>Q: Wayland screen share</strong><br />
+            A: Install <code>xdg-desktop-portal</code> and your DE-specific portal (e.g., <code>xdg-desktop-portal-gnome</code>/<code>...-kde</code>).
           </div>
-          <div class="faq-item">
-            <h4>Pre-seed configuration</h4>
-            <p>User: <code>~/.config/VoiceTelPhone/voicetel.json</code> · System: <code>/etc/VoiceTelPhone/voicetel.json</code></p>
+          <div class="callout">
+            <strong>Q: Pre-seed configuration</strong><br />
+            A: User: <code>~/.config/VoiceTelPhone/voicetel.json</code> · System: <code>/etc/VoiceTelPhone/voicetel.json</code>
           </div>
         </section>
       </main>
