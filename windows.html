@@ -96,7 +96,12 @@
               <p><a class="btn primary" href="#" id="winMsi">Download .msi</a></p>
             </div>
           </div>
-          <div class="callout"><strong>Note:</strong> Replace these links with your actual release URLs or GitHub assets.</div>
+          <div class="callout">
+            <strong>SHA256 SUMS:</strong><br />
+<pre>
+dcac95682fcc99b3f6fca5684466032adbef51d9c933aed31b2a6bc95fd2fbb2  VoiceTel-3.5.5-Setup.exe
+<pre>
+          </div>
         </section>
 
         <section id="verify">
@@ -167,7 +172,7 @@
   </div>
   <script>
     document.getElementById('yr').textContent=new Date().getFullYear();
-    document.getElementById('winExe').href = '#';
+    document.getElementById('winExe').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-Setup.exe';
     document.getElementById('winMsi').href = '#';
   </script>
 </body>
