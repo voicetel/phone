@@ -174,7 +174,7 @@ Desktop applications store logs in:
 
 ## 🤝 Support
 
-- **Email**: [support@voicetel.com](mailto:support@voicetel.com)
+- **Email**: support&#8203;@&#8203;voicetel&#8203;.&#8203;com
 - **Issues**: Report bugs via GitHub Issues
   - [Web App Issues](https://github.com/voicetel/phone/issues)
   - [Desktop App Issues](https://github.com/voicetel/voicetel-phone-desktop/issues)

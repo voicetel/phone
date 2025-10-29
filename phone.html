@@ -812,7 +812,7 @@
 							<p style="margin-top: 10px">
 								<strong
 									>Need assistance? Contact the
-									<a href="mailto:support@voicetel.com"
+									<a id="supportEmailPhone" href="#"
 										>VoiceTel Support Team</a
 									></strong
 								>
@@ -2456,6 +2456,16 @@
 			window.addEventListener("beforeunload", () => {
 				cleanupAllResources();
 			});
+
+			// Obfuscate support email
+			(function(){
+				const u = "support", d = "voicetel", t = "com";
+				const a = u + "@" + d + "." + t;
+				const el = document.getElementById("supportEmailPhone");
+				if (el) {
+					el.href = "mailto:" + a;
+				}
+			})();
 		</script>
 	</body>
 </html>

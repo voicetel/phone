@@ -411,7 +411,7 @@
                         </p>
                         <div class="actions">
                             <a class="btn primary" href="http://www.voicetel.com" target="_blank">Create Account</a>
-                            <a class="btn ghost" href="http://www.voicetel.com" target="_blank">Manage Account</a>
+                            <a class="btn ghost" href="https://www.voicetel.com" target="_blank">Manage Account</a>
                         </div>
                     </div>
 
@@ -746,7 +746,8 @@
                             <div class="row">
                                 <a
                                     class="btn primary"
-                                    href="mailto:support@voicetel.com"
+                                    id="supportEmail"
+                                    href="#"
                                     >Email Support</a
                                 >
                                 <button
@@ -967,6 +968,16 @@
                 document.addEventListener("keydown", (e) => {
                     if (e.key === "Escape") hide();
                 });
+            })();
+
+            // Obfuscate support email
+            (function(){
+                const u = "support", d = "voicetel", t = "com";
+                const a = u + "@" + d + "." + t;
+                const el = document.getElementById("supportEmail");
+                if (el) {
+                    el.href = "mailto:" + a;
+                }
             })();
         </script>
     </body>
