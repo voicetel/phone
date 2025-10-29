@@ -216,7 +216,7 @@ All SIP signaling and media negotiation occur directly between your device and y
 
 ## 📄 License
 
-Copyright © 2024 VoiceTel. All rights reserved.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙌 Contributors
 
