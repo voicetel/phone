@@ -76,71 +76,79 @@
       </aside>
 
       <main>
+        <section class="section">
+          <h2>Quick downloads</h2>
+          <p class="intro">Install the prebuilt apps for your platform. No compiling required.</p>
+          <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+            <a class="pill" href="/windows.html">Windows download guide</a>
+            <a class="pill" href="/macOS.html">macOS download guide</a>
+            <a class="pill" href="/linux.html">Linux download guide</a>
+            <a class="pill" href="#mobile">Mobile downloads</a>
+          </div>
+        </section>
         <section id="iphone" class="section">
-          <h2>iPhone: Enable Developer Mode & Install</h2>
-          <p class="intro">These steps guide you from enabling Developer Mode to installing the app with Xcode. A Mac is required.</p>
+          <h2>iPhone: Sideload from S3 (Developer Mode)</h2>
+          <p class="intro">Until the App Store listing is live, install the signed <code>.ipa</code> using a Mac with Apple Configurator 2 or Xcode. Developer Mode is required on the device.</p>
           <ol>
-            <li><span class="step-title">Turn on Developer Mode</span>
+            <li><span class="step-title">Enable Developer Mode on iPhone</span>
               <ol>
-                <li>Update your iPhone to the latest iOS version.</li>
-                <li>Open <strong>Settings → Privacy &amp; Security</strong>.</li>
-                <li>Scroll to <strong>Developer Mode</strong> and toggle it on.</li>
-                <li>Restart when prompted, then confirm Developer Mode is enabled.</li>
+                <li>Update iOS to the latest version.</li>
+                <li>Go to <strong>Settings → Privacy &amp; Security</strong>.</li>
+                <li>Scroll to <strong>Developer Mode</strong> and toggle on, then restart.</li>
               </ol>
             </li>
             <li><span class="step-title">Install Required Software (Mac)</span>
               <ol>
-                <li>Open the <strong>Mac App Store</strong> and install <strong>Xcode</strong>.</li>
-                <li>Launch Xcode, accept license prompts, and sign in with your Apple ID.</li>
-                <li>(Optional) Install <strong>Command Line Tools</strong> via <em>Xcode → Settings → Locations</em>.</li>
+                <li>Install <strong>Apple Configurator 2</strong> from the Mac App Store (or <strong>Xcode</strong>).</li>
+                <li>Sign in with an Apple ID if prompted.</li>
               </ol>
             </li>
-            <li><span class="step-title">Get the App Source</span>
+            <li><span class="step-title">Download the iOS binary</span>
               <ol>
-                <li>Download the source from your repository (e.g., <em>mobile-ios</em>).</li>
-                <li>Extract the ZIP and open the <code>.xcodeproj</code> or <code>.xcworkspace</code> in Xcode.</li>
+                <li>Download the <code>.ipa</code>: <a href="https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.ipa">VoiceTel-3.5.5.ipa</a></li>
               </ol>
             </li>
-            <li><span class="step-title">Build & Install</span>
+            <li><span class="step-title">Install the IPA</span>
               <ol>
-                <li>Connect your iPhone via USB and unlock it.</li>
-                <li>Select your iPhone as the run target in Xcode.</li>
-                <li>Open <strong>Signing &amp; Capabilities</strong> and choose your Apple ID team.</li>
-                <li>Click <strong>Run ▶</strong> to build and install.</li>
-                <li>On the phone: <strong>Settings → General → VPN &amp; Device Management</strong> → Trust your developer profile (first run only).</li>
+                <li>Connect iPhone via USB and unlock it.</li>
+                <li>Open <strong>Apple Configurator 2</strong> and drag the <code>.ipa</code> onto the device. Alternatively, in <strong>Xcode → Window → Devices and Simulators</strong>, select your device and press the <strong>+</strong> to add the <code>.ipa</code>.</li>
+                <li>On first launch, if prompted, go to <strong>Settings → General → VPN &amp; Device Management</strong> and trust the developer app.</li>
               </ol>
             </li>
           </ol>
-          <div class="callout"><strong>Tip:</strong> If the build fails, open <strong>Xcode → Settings → Locations</strong> and ensure <em>Command Line Tools</em> is set.</div>
+          <div class="callout"><strong>Note:</strong> Installing an <code>.ipa</code> requires a valid provisioning profile. If you encounter signing errors, contact your administrator for an enterprise/TestFlight build.</div>
         </section>
 
         <section id="android" class="section">
-          <h2>Android: Enable Developer Options & Install</h2>
+          <h2>Android: Install APK from S3 (Developer Options + ADB)</h2>
+          <p class="intro">Until the Google Play listing is live, install the signed <code>.apk</code> from S3 via ADB.</p>
           <ol>
-            <li><span class="step-title">Turn on Developer Options</span>
+            <li><span class="step-title">Enable Developer Options &amp; USB Debugging</span>
               <ol>
-                <li>Open <strong>Settings → About Phone</strong>.</li>
-                <li>Tap <strong>Build Number</strong> seven times until you see a confirmation.</li>
-                <li>Go back to <strong>Settings → System → Developer Options</strong>.</li>
-                <li>Enable <strong>USB Debugging</strong>.</li>
+                <li>Open <strong>Settings → About Phone</strong> and tap <strong>Build Number</strong> seven times.</li>
+                <li>Go to <strong>Settings → System → Developer Options</strong> and enable <strong>USB Debugging</strong>.</li>
               </ol>
             </li>
-            <li><span class="step-title">Install Required Software</span>
+            <li><span class="step-title">Install Platform Tools</span>
               <ol>
-                <li>Download and install <strong>Android Studio</strong>.</li>
-                <li>During setup, install the <strong>Android SDK Platform Tools</strong>.</li>
-                <li>Connect your device via USB and allow debugging access on the phone.</li>
+                <li>Install <strong>Android SDK Platform Tools</strong> (includes <code>adb</code>) from Google.</li>
+                <li>Connect your device via USB and accept the debugging prompt on the phone.</li>
               </ol>
             </li>
-            <li><span class="step-title">Build & Install</span>
+            <li><span class="step-title">Download the APK</span>
               <ol>
-                <li>Download the source (e.g., <em>mobile-android</em> repository).</li>
-                <li>Open the project in Android Studio; wait for Gradle sync to complete.</li>
-                <li>Choose <strong>Run ▶ → Run App</strong> and select your device.</li>
+                <li>Download: <a href="https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.apk">VoiceTel-3.5.5.apk</a></li>
+              </ol>
+            </li>
+            <li><span class="step-title">Install with ADB</span>
+              <ol>
+                <li>Open Terminal/Command Prompt in the download directory.</li>
+                <li>Run: <code>adb devices</code> to verify the device is listed.</li>
+                <li>Install: <code>adb install -r VoiceTel-3.5.5.apk</code></li>
               </ol>
             </li>
           </ol>
-          <div class="callout"><strong>Tip:</strong> If you see <em>device offline</em>, run <code>adb kill-server</code> then <code>adb start-server</code> in a terminal, and reconnect the phone.</div>
+          <div class="callout"><strong>Tip:</strong> If you see <em>device offline</em>, run <code>adb kill-server</code> then <code>adb start-server</code>, and reconnect the phone.</div>
         </section>
 
         <section id="windows" class="section">
