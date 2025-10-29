@@ -192,13 +192,17 @@ Desktop applications store logs in:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/desktop_main.png" alt="Desktop — Main Interface" width="400" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/desktop_call.png" alt="Desktop — Active Call" width="400" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_dialer.png" alt="Desktop — Dialer Interface" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_call-history.png" alt="Desktop — Call History" width="240" /> 
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_event-log.png" alt="Desktop — Event Log" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_settings.png" alt="Desktop — Settings" width="240" />
 </p>
 
 <p align="center">
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_dialpad.png" alt="iPhone — Dialer" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/android_dialer.png" alt="Android — Dialer" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_dialpad.png" alt="iPhone — Dialpad" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_contacts.png" alt="iPhone — Contacts" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_callhistory.png" alt="iPhone — Call History" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_settings.png" alt="iPhone — Settings" width="240" />
 </p>
 
 ## 🔒 Privacy
