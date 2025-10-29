@@ -192,17 +192,15 @@ Desktop applications store logs in:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_dialer.png" alt="Desktop — Dialer Interface" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_call-history.png" alt="Desktop — Call History" width="240" /> 
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_event-log.png" alt="Desktop — Event Log" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_settings.png" alt="Desktop — Settings" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_dialer.png" alt="Desktop — Dialer Interface" width="270" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_event-log.png" alt="Desktop — Event Log" width="270" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/linux_settings.png" alt="Desktop — Settings" width="270" />
 </p>
 
 <p align="center">
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_dialpad.png" alt="iPhone — Dialpad" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_contacts.png" alt="iPhone — Contacts" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_callhistory.png" alt="iPhone — Call History" width="240" />
-  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_settings.png" alt="iPhone — Settings" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_dialpad.png" alt="iPhone — Dialpad" width="270" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_contacts.png" alt="iPhone — Contacts" width="270" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_settings.png" alt="iPhone — Settings" width="270" />
 </p>
 
 ## 🔒 Privacy
