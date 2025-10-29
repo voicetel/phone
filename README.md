@@ -1,6 +1,23 @@
-# VoiceTel Phone
+# 🎤 VoiceTel Phone
 
 A modern, cross-platform SIP phone application available for Web, Desktop, and Mobile platforms. Built with WebRTC technology for crystal-clear voice communications.
+
+![Version](https://img.shields.io/badge/version-3.5.5-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Desktop%20%7C%20Mobile-lightgrey)
+
+## 📚 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Requirements](#-requirements)
+- [User Accounts](#-user-accounts)
+- [Configuration](#-configuration)
+- [Development](#-development)
+- [Screenshots](#-screenshots)
+- [Troubleshooting](#-troubleshooting)
+- [Support](#-support)
+- [License](#-license)
 
 ## 🌟 Features
 
@@ -172,6 +189,22 @@ Desktop applications store logs in:
 - **macOS**: `~/Library/Logs/VoiceTelPhone/`
 - **Linux**: `~/.local/share/VoiceTelPhone/logs/`
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/desktop_main.png" alt="Desktop — Main Interface" width="400" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/desktop_call.png" alt="Desktop — Active Call" width="400" />
+</p>
+
+<p align="center">
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/iPhone_dialpad.png" alt="iPhone — Dialer" width="240" />
+  <img src="https://voicetel-phone.s3.us-east-1.amazonaws.com/images/android_dialer.png" alt="Android — Dialer" width="240" />
+</p>
+
+## 🔒 Privacy
+
+All SIP signaling and media negotiation occur directly between your device and your SIP server. No analytics or third‑party tracking are embedded. Credentials are stored locally on the device.
+
 ## 🤝 Support
 
 - **Email**: support&#8203;@&#8203;voicetel&#8203;.&#8203;com
@@ -185,6 +218,20 @@ Desktop applications store logs in:
 
 Copyright © 2024 VoiceTel. All rights reserved.
 
+## 🙌 Contributors
+
+We welcome contributions! Thanks to these awesome people:
+
+- [Michael Mavroudis](https://github.com/mavroudis) - Lead Developer & Architect
+
+## 💖 Sponsors
+
+Proudly supported by:
+
+| Sponsor | Contribution |
+|---------|--------------|
+| [VoiceTel Communications](http://www.voicetel.com) | Primary development and testing infrastructure |
+
 ## 🔗 Links
 
 - **Website**: [www.voicetel.com](http://www.voicetel.com)
@@ -197,5 +244,4 @@ Copyright © 2024 VoiceTel. All rights reserved.
 
 ---
 
-**Version**: 3.5.5  
-**Last Updated**: December 2024
+**Version**: 3.5.5
