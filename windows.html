@@ -90,16 +90,23 @@
               <p>Best for most users. Wizard-based setup with UI.</p>
               <p><a class="btn primary" href="#" id="winExe">Download .exe</a></p>
             </div>
+            </div>
+            <div class="card">
+              <h3>MSI Installer (.msi)</h3>
+              <p>For enterprise use (SCCM/Intune/GPO). Supports silent installs.</p>
+              <p><a class="btn primary" href="#" id="winMsi">Download .msi</a></p>
+            </div>            
             <div class="card">
               <h3>Portable executable (.exe)</h3>
               <p>Runs directly directly on Windows without the additoinal packaging.</p>
-              <p><a class="btn primary" href="#" id="winMsi">Download .exe</a></p>
+              <p><a class="btn primary" href="#" id="winPe">Download .exe</a></p>
             </div>
           </div>
           <div class="callout">
             <strong>SHA256 SUMS:</strong><br />
 <pre>
-dcac95682fcc99b3f6fca5684466032adbef51d9c933aed31b2a6bc95fd2fbb2  VoiceTel-3.5.5-Setup.exe
+decd990d14d58da9da13c4773f27ae0d53ceb9018d423ddb66a570fc4949016f  VoiceTel-3.5.5-Installer.msi
+ef9b39d58e4f99c763ae52509dab3a5868a140b7169fd42c853ca88a833cf48c  VoiceTel-3.5.5-Setup.exe
 b8eb4df116a4bfa1d17051c8ace38822311e5400e58bb3421d721e22dde2b5ae  VoiceTel-3.5.5.exe
 <pre>
           </div>
@@ -174,7 +181,8 @@ b8eb4df116a4bfa1d17051c8ace38822311e5400e58bb3421d721e22dde2b5ae  VoiceTel-3.5.5
   <script>
     document.getElementById('yr').textContent=new Date().getFullYear();
     document.getElementById('winExe').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-Setup.exe';
-    document.getElementById('winMsi').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.exe';
+    document.getElementById('winMsi').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5-Setup.exe';
+    document.getElementById('winPe').href = 'https://voicetel-phone.s3.us-east-1.amazonaws.com/VoiceTel-3.5.5.exe';
   </script>
 </body>
 </html>
