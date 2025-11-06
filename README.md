@@ -40,6 +40,8 @@ A modern, cross-platform SIP phone application available for Web, Desktop, and M
 - 🖥️ System tray & global mute hotkey
 - 🔄 Auto-start on login, auto-register
 - 💪 Crash-resilient reconnect & logs
+- 🎙️ Call recording with inline playback and mixed audio tracks
+- 📞 Call history with audio playback and redial functionality
 
 **Mobile (iOS, Android)**
 - 🎧 Native audio routing & Bluetooth
