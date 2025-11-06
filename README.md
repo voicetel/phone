@@ -46,6 +46,7 @@ A modern, cross-platform SIP phone application available for Web, Desktop, and M
 **Mobile (iOS, Android)**
 - 🎧 Native audio routing & Bluetooth
 - 📱 Background mode with quick actions
+- 🎙️ Call recording with inline playback and mixed audio tracks
 
 ## 🚀 Quick Start
 
