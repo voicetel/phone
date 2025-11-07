@@ -2,7 +2,7 @@
 
 A modern, cross-platform SIP phone application available for Web, Desktop, and Mobile platforms. Built with WebRTC technology for crystal-clear voice communications.
 
-![Version](https://img.shields.io/badge/version-3.5.5-blue)
+![Version](https://img.shields.io/badge/version-3.5.6-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Desktop%20%7C%20Mobile-lightgrey)
 
@@ -21,13 +21,19 @@ A modern, cross-platform SIP phone application available for Web, Desktop, and M
 
 ## 🌟 Features
 
-### Common across all platforms
-- ✅ Secure SIP over TLS
-- ✅ DTMF (RFC 2833 and SIP INFO)
-- ✅ Caller ID, privacy toggle, and call history
-- ✅ NAT-friendly ICE/STUN configuration
-- ✅ Config persistence with local storage
-- ✅ Troubleshooting log and diagnostics
+### 📞 Core Telephony (All Platforms)
+- **WebRTC/SIP Integration** - Full SIP over WebSocket support using SIP.js
+- **Outgoing Calls** - Dial any number with automatic number sanitization
+- **Incoming Calls** - Visual call notifications with caller ID display
+- **Call Controls** - Mute, hang up, call duration timer
+- **DTMF Support** - Send touch-tone digits during calls via dialpad or keyboard
+- **Ringing Handling** - Local ringback on 180/183; early media muted until answer
+
+### 🔐 Security & Privacy (All Platforms)
+- **Local Storage** - Credentials stored locally using browser storage
+- **Hide Caller ID** - Optional privacy mode for outgoing calls
+- **No External Dependencies** - All data processing happens locally
+- **Secure SIP over TLS** - Encrypted signaling
 
 ### Platform-specific advantages
 
@@ -35,6 +41,7 @@ A modern, cross-platform SIP phone application available for Web, Desktop, and M
 - 🌐 Instant launch links (tel: / custom scheme)
 - 🚀 No installation required — perfect for kiosks & VDI
 - 📱 Browser mic permissions guide
+- 📋 Real-time SIP message logging and debugging
 
 **Desktop (Windows, macOS, Linux)**
 - 🖥️ System tray & global mute hotkey
@@ -42,11 +49,27 @@ A modern, cross-platform SIP phone application available for Web, Desktop, and M
 - 💪 Crash-resilient reconnect & logs
 - 🎙️ Call recording with inline playback and mixed audio tracks
 - 📞 Call history with audio playback and redial functionality
+- 👥 Google Contacts integration with search and quick dial
+- 📋 Event Log - Real-time SIP message logging and debugging
+- 🔔 Desktop notifications for incoming calls
+- ⌨️ Keyboard shortcuts (Enter to answer, Escape to decline)
 
 **Mobile (iOS, Android)**
 - 🎧 Native audio routing & Bluetooth
 - 📱 Background mode with quick actions
 - 🎙️ Call recording with inline playback and mixed audio tracks
+- 👥 Device contacts integration (permission required)
+- 🕘 Call history with integrated recording playback
+- 📋 Real-time SIP message log
+
+### 🔧 Advanced Features (All Platforms)
+- **Caller ID Customization** - Set custom display name and 10-digit North American caller ID
+- **Smart Number Handling** - Accepts any format, automatically cleans to digits
+- **Auto-Rejection** - Busy signal for incoming calls when already on a call
+- **30-Second Timeout** - Auto-decline unanswered incoming calls
+- **Automatic DTMF** - RFC 2833 telephone-event with SIP INFO fallback
+- **WebRTC Diagnostics** - Built-in troubleshooting tips for media negotiation issues
+- **NAT-friendly ICE/STUN configuration** - Works behind firewalls and NAT
 
 ## 🚀 Quick Start
 
@@ -249,4 +272,4 @@ Proudly supported by:
 
 ---
 
-**Version**: 3.5.5
+**Version**: 3.5.6
